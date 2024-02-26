@@ -1,0 +1,1 @@
+### l) Permite que los equipos de la LAN puedan navegar por internet, excepto a la página www.realbetisbalompie.es
