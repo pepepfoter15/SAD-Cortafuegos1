@@ -17,6 +17,9 @@ sudo nft add table inet filter
 Tras esto, creamos la reglas mediante nftables para poder acceder mediante la máquina lan hacia afuera mediante ssh. Estas reglas son las siguientes:
 
 ```sql
+sudo nft add chain inet filter input { type filter hook input priority 0\; }
+sudo nft add chain inet filter output { type filter hook output priority 0\; }
+
 sudo nft add rule inet filter output tcp dport 22 ct state new,established accept
 sudo nft add rule inet filter input tcp sport 22 ct state established accept
 ```
