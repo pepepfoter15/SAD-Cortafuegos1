@@ -4,7 +4,7 @@ Para poder realizar consultas desde la máquina de corta fuegos solo al servidor
 
 ```sql
 sudo nft add rule inet filter output ip daddr 8.8.8.8 udp dport 53 accept
-sudo nft add rule inet filter output ip daddr != 8.8.8.8 udp dport 53 reject with icmp port-unreachable
+sudo nft add rule inet filter output ip daddr != 8.8.8.8 udp dport 53 reject
 ```
 
 Esta reglas nos aceptan el tráfico a las peticiones a nuestro servidor DNS que es 8.8.8.8 y si no es ese el servidor, lo rechaza. Las reglas quedarán de esta manera:
