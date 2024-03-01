@@ -3,7 +3,8 @@
 Para que todos los equipos de la red local, con rango 192.168.100.0/24, tenga conexión al exterior tendremos que añadir la siguiente regla:
 
 ```sql
-sudo nft add rule inet filter output ip saddr 192.168.100.0/24 counter accept
+sudo nft add rule inet filter forward iifname "ens4" oifname "ens3" ip saddr 192.168.100.0/24 icmp type echo-request counter accept
+sudo nft add rule inet filter forward iifname "ens3" oifname "ens4" icmp type echo-reply counter accept
 ```
 
 Cuando lo tengamos, pasamos a ver que se ha creado correctamente.
