@@ -1,9 +1,5 @@
 ### h) Instala un servidor de correos en la máquina de la LAN. Permite el acceso desde el exterior y desde el cortafuegos al servidor de correos. Para probarlo puedes ejecutar un telnet al puerto 25 tcp.
 
-sudo nft add rule inet filter forward iifname "ens4" oifname "ens3" ip saddr 192.168.100.0/24 udp dport 53 ct state new,established counter accept
-sudo nft add rule inet filter forward iifname "ens3" oifname "ens4" ip daddr 192.168.100.0/24 udp sport 53 ct state established counter accept
-
-
 Como nos pide que instalamos un servidor de correos en nuetra máquina LAN, lo que haremos será instalar postfix en dichha máquina primero de todo. Los comandos son los siguientes:
 
 ```sql
