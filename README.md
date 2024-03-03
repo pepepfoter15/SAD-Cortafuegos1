@@ -5,8 +5,6 @@ Realizada por Jose Carlos Rodríguez Cañas.
 
 Realiza con NFTABLES el ejercicio de la página https://fp.josedomingo.org/seguridadgs/u03/perimetral_iptables.html documentando las pruebas de funcionamiento realizadas.
 
-En mi caso la voy hacer en un escenario Vagrant ya que estoy más cómdodo utilizándolo. Teneís el archivo Vagrantfile en mi respositorio.
-
 Debes añadir después las reglas necesarias para que se permitan las siguientes operaciones:
 
 [a) Permite poder hacer conexiones ssh al exterior desde la máquina cortafuegos.](/Ejercicios/Ejercicioa.md)
